@@ -1,0 +1,164 @@
+html, body{
+	height:100%;
+}
+
+body{
+	/*margin at zero allows for a solid column starting at the top of the page*/
+	margin:0;
+	background-color:rgb(4,16,89);
+	color:rgb(255,255,255);
+	display:block;
+	font-family: arial, helvetica, sans-serif;
+}
+
+h1{
+	/* this makes sure that the column doesnt have a gap at the top */
+	margin-top:0;
+}
+
+/*make sure links display properly*/
+a, a:link, a:visited{
+	color: White;
+}
+
+a:hover, a:active{
+	color: #cccccc;
+}
+
+/*make sure that the items of a sub list have the proper margins*/
+ul ol > li{
+	margin-bottom:0.25em;
+}
+
+ul ol > li:last-child{
+	margin-bottom:0;
+}
+
+ul ul > li{
+	margin-bottom:0.25em;
+}
+
+ul ul > li:last-child{
+	margin-bottom:0;
+}
+
+ol ol > li{
+	margin-bottom:0.25em;
+}
+
+ol ol > li:last-child{
+	margin-bottom:0;
+}
+
+ol ul > li{
+	margin-bottom:0.25em;
+}
+
+ol ul > li:last-child{
+	margin-bottom:0;
+}
+
+/*handles the navigation bar*/
+nav ul{
+	padding-left: 0;
+	margin-left: 0;
+	/*gives some space between the nav bar and the content*/
+	margin-bottom: 2em;
+	background-color: rgb(3,11,63);
+	float: left;
+	width: 100%;
+}
+
+nav ul li{
+	display: inline;
+}
+
+nav ul li a{
+	padding: 0.2em 1em;
+	background-color: rgb(3,11,63);
+	text-decoration: none;
+	float: left;
+	border-right: 1px solid #fff;
+}
+
+nav ul li a:hover{
+	/*make sure that the generic links don't effect the color of the navbar links*/
+	color: White;
+	background-color: rgb(49,59,119);
+}
+
+nav ul li a#current{
+	background-color:rgb(114,17,17);
+}
+
+/*give the central column its background color*/
+#wrapper{
+	background-color:rgb(0,51,76);
+	max-width: 960px;
+	margin-left:auto;
+	margin-right:auto;
+	min-height:100vh;
+}
+
+/*give the content a bit of spacing*/
+#content{
+	margin-left:1.5em;
+	margin-right:1em;
+	padding-bottom:1em;
+}
+/*handles images*/
+figure.image{
+	float:right;
+	clear:right;
+	margin-right:2em;
+	margin-left:2em;
+	margin-top:0;
+	margin-bottom:0;
+	border: 1.5px solid black;
+}
+figure.image > img{
+	border-bottom: 1.5px solid black;
+}
+
+figure.image figcaption{
+	/*could not figure out how to get flex to shrink this, hard coded it because both images have the same width*/
+	width:290px;
+	padding-left:5px;
+	padding-right:5px;
+}
+
+/*seperate sections of the text with borders*/
+section {
+	border-top: 1px solid rgb(0,31,46);
+}
+/*
+this section is to make sure the nav bar works in smaller windows
+note: I know that the size that the navbar breaks at differs between computers, the computers I tested this on could go to smaller sizes with out the nav bar breaking, I used the chrome developer tool to come up with this size.
+*/
+@media screen and (max-width: 734px){
+	nav ul li{
+		float: none;
+	}
+	nav ul li a{
+		width: 100%;
+		text-align: center;
+		border-top: 1px solid white;
+		border-bottom: 1px solid white;
+	}
+	nav ul li:first-child a{
+		border-top: none;
+	}
+	nav ul li:last-child a{
+		border-bottom: none;
+	}
+}
+/*this section is to make sure that the images and text work at mobile sizes*/
+@media screen and (max-width: 480px){
+	figure.image{
+		float:none;
+		margin-top:0.5em;
+	}
+	#content {
+		margin-left:0.5em;
+	}
+}

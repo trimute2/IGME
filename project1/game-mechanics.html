@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta charset="utf-8" />
+		<title>Game Mechanics</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+	</head>
+	
+	<body>
+		<div id="wrapper">
+			<header>
+				<nav>
+					<ul>
+						<li><a href="index.html">Main Page</a></li>
+						<li><a href="#"  id="current"> Game Mechanics</a></li>
+						<li><a href="design-goals.html">Design Goals</a></li>
+						<li><a href="documentation.html">Documentation</a></li>
+						<li><a href="game.html">Play The Game</a></li>
+					</ul>
+				</nav>
+			</header>
+			
+			<div id="content">
+				<h1>Game Mechanics</h1>
+				<p>Here is a list of the various mechanics of the game</p>
+				<ul>
+					<li>Attacks and Combos
+						<figure class="image">
+							<img src="media/combo-arcs.png" alt="possible arcs of knockback">
+							<figcaption>a mock up of the four possible arcs of knock back from the end of a combo</figcaption>
+						</figure>
+						<p>In the game the main character has two attacks, punch and kick. Three attacks can be chained together in to a combo, with each attacks position in the combo having an effect</p>
+						<ol>
+							<li>The first attack in the chain determines if the combo starts, depending on the enemy type and the state that the enemy is in they will block a combo depending on the opening attack</li>
+							<li>The second attack in the chain determines how far the third attack will knock back the enemy</li>
+							<li>The third and final attack in the sequence knocks back the enemy and determines the arc the enemy makes when they are knocked back</li>
+						</ol>
+						<p>On top of the combos players can also attack in the air and knock enemies into the air with a lift attack. Performing a lift attack ends the current combo</p>
+					</li>
+					<li>Score system
+						<p>One of the main focuses of the game is a score system, the player will gain points for things like knocking an enemy into a wall, hitting an enemy in mid air, and knocking enemies into one another. This score system also will give the player a grade at the end of the level, reflecting how well the player did.</p>
+					</li>
+					<li>Arena
+						<figure class="image">
+							<img src="media/arena.png" alt="a verry simplified mock up of the arena">
+							<figcaption>general mock up of the arena</figcaption>
+						</figure>
+						<p>When the player approaches an enemy or group of enemies, walls show up surrounding the player and enemies. Enemies can be bounced off the walls and the walls will disappear when the enemies are defeated. Players can also jump of the walls in mid-air. If the player hits the wall they will turn around, the third time the player hits the right wall they will run through it and receive a score penalty for any enemy they haven't defeated. These arenas can also have their own score grades, with the final grade being the average of all the grades the player received that level.</p>
+					</li>
+					<li>Enemies
+						<p>Here are the mechanics that apply to all enemies in the game:</p>
+						<ul>
+							<li>Enemies can be knocked back and knocked into the air</li>
+							<li>Enemies will bounce off of the wals of the arena</li>
+							<li>If two enemies collide in mid air, they will bounce off of each other</li>
+							<li>If an enemy health reaches zero in mid air, they will not die until they hit the ground</li>
+							<li>Every time the enemy is hit in mid air their velocity increases, their velocity resets apon hitting the ground</li>
+						</ul>
+						<p>While it would be nice to have a variety of enemies, I am planning for only two basic enemy types. One enemy that blocks combos that open with kicks and one enemy that blocks combos that open with punches. If there is extra time I will add more enemies.</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>
